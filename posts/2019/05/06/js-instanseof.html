@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JS instanseof 运算符! | ❤GaoSir 的个人博客</title>
+    <meta name="description" content="GaoSir 的个人博客">
+    <link rel="icon" href="/Blog/images/favicon.ico">
+    
+    <link rel="preload" href="/Blog/assets/css/0.styles.335d63b7.css" as="style"><link rel="preload" href="/Blog/assets/js/app.a2efee87.js" as="script"><link rel="preload" href="/Blog/assets/js/3.c4d6cd67.js" as="script"><link rel="preload" href="/Blog/assets/js/16.b3d164fa.js" as="script"><link rel="prefetch" href="/Blog/assets/js/1.1efb6ac1.js"><link rel="prefetch" href="/Blog/assets/js/10.49d2b424.js"><link rel="prefetch" href="/Blog/assets/js/11.8cd98d3c.js"><link rel="prefetch" href="/Blog/assets/js/12.d7eb326b.js"><link rel="prefetch" href="/Blog/assets/js/13.4e0601e8.js"><link rel="prefetch" href="/Blog/assets/js/14.1070bf65.js"><link rel="prefetch" href="/Blog/assets/js/15.1a9b51bf.js"><link rel="prefetch" href="/Blog/assets/js/17.c6bae3a9.js"><link rel="prefetch" href="/Blog/assets/js/18.475a2d5d.js"><link rel="prefetch" href="/Blog/assets/js/19.98a649fc.js"><link rel="prefetch" href="/Blog/assets/js/20.f0ad90a7.js"><link rel="prefetch" href="/Blog/assets/js/4.f4eb8456.js"><link rel="prefetch" href="/Blog/assets/js/5.c5f4294d.js"><link rel="prefetch" href="/Blog/assets/js/6.b51fd1dc.js"><link rel="prefetch" href="/Blog/assets/js/7.4442170b.js"><link rel="prefetch" href="/Blog/assets/js/8.ef6684a2.js"><link rel="prefetch" href="/Blog/assets/js/9.11e55fe3.js">
+    <link rel="stylesheet" href="/Blog/assets/css/0.styles.335d63b7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-meteorlxy"><header class="header" data-v-0539f1bd><div data-v-39c72c19 data-v-0539f1bd><nav class="navbar" data-v-39c72c19><div class="container" data-v-39c72c19><a href="/Blog/" class="router-link-active" data-v-39c72c19><span class="navbar-site-name" data-v-39c72c19>
+          ❤GaoSir 的个人博客
+        </span></a> <div class="navbar-toggler" data-v-39c72c19><svg class="icon" style="font-size:1.2em;" data-v-39c72c19 data-v-39c72c19><title data-v-39c72c19 data-v-39c72c19>menu</title><use xlink:href="#icon-menu" data-v-39c72c19 data-v-39c72c19></use></svg></div> <div class="navbar-links" data-v-39c72c19><a href="/Blog/" class="navbar-link" data-v-39c72c19>
+            首页
+          </a><a href="/Blog/posts/" class="navbar-link router-link-active" data-v-39c72c19>
+            文章
+          </a><a href="https://www.cnblogs.com/gaosirs" target="_blank" rel="noopener noreferrer" class="navbar-link" data-v-39c72c19>
+            博客园
+          </a><a href="/Blog/about/" class="navbar-link" data-v-39c72c19>
+            关于我
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-39c72c19></div></div> <div class="banner" data-v-98d6aa8c data-v-0539f1bd data-v-0539f1bd><div class="container" data-v-98d6aa8c><div class="center" data-v-98d6aa8c><h1 data-v-98d6aa8c data-v-0539f1bd>
+          JS instanseof 运算符!
+        </h1></div></div></div></header> <div class="container clearfix show-aside" data-v-6cd81e6a data-v-6cd81e6a><main class="main" data-v-6cd81e6a><div class="post" data-v-6cd81e6a data-v-6cd81e6a><section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      发布时间 : 2019-05-06
+    </span> <span class="update-date" data-v-4e23451f>
+      最后修改 : 2019-05-06
+    </span></section> <section class="post-links" data-v-4e23451f><a href="/Blog/posts/2019/05/05/html5-characteristic.html" class="post-link" data-v-4e23451f>
+      上一篇文章 : HTML5 新特性!
+    </a> <a href="/Blog/posts/2019/05/07/life-darktime.html" class="post-link" data-v-4e23451f>
+      下一篇文章 : 《暗时间》 读书笔记!
+    </a></section></section> <article class="main-div"><div class="content default"><h2 id="概述"><a href="#概述" aria-hidden="true" class="header-anchor">#</a> 概述</h2> <p>instanceof运算符用来判断一个构造函数的prototype属性所指向的对象是否存在另外一个要检测对象的原型链上。
+<br></p> <h2 id="语法"><a href="#语法" aria-hidden="true" class="header-anchor">#</a> 语法</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code>obj <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">;</span> <span class="token comment">// true </span>
+</code></pre></div><br> <h2 id="描述"><a href="#描述" aria-hidden="true" class="header-anchor">#</a> 描述</h2> <p>用于判断一个引用类型是否属于某构造函数；
+<br></p> <h2 id="底层原理"><a href="#底层原理" aria-hidden="true" class="header-anchor">#</a> 底层原理</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">fnInstanseof</span><span class="token punctuation">(</span><span class="token parameter"><span class="token constant">L</span><span class="token punctuation">,</span><span class="token constant">R</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment">// L 表示左表达式，R 表示右表达式</span>
+	<span class="token keyword">var</span> <span class="token constant">O</span> <span class="token operator">=</span> <span class="token class-name">R</span><span class="token punctuation">.</span>prototype<span class="token punctuation">,</span> <span class="token comment">// 取 R 的显示原型</span>
+		<span class="token constant">L</span> <span class="token operator">=</span> <span class="token constant">L</span><span class="token punctuation">.</span>__proto__<span class="token punctuation">;</span> <span class="token comment">// 取 L 的隐式原型</span>
+
+	<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token constant">L</span> <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token constant">O</span> <span class="token operator">===</span> <span class="token constant">L</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 当 O显式原型 严格等于  L隐式原型 时，返回true</span>
+			<span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token constant">L</span> <span class="token operator">=</span> <span class="token constant">L</span><span class="token punctuation">.</span>__proto__<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><br> <h2 id="举例"><a href="#举例" aria-hidden="true" class="header-anchor">#</a> 举例</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>sex</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ 
+     <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+ 
+     <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+ 
+     <span class="token keyword">this</span><span class="token punctuation">.</span>sex <span class="token operator">=</span> sex<span class="token punctuation">;</span>
+ 
+ <span class="token punctuation">}</span>
+ 
+ <span class="token keyword">var</span> per <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">&quot;小明&quot;</span>，<span class="token number">20</span>，“男”<span class="token punctuation">)</span>；
+ 
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>per <span class="token keyword">instanceof</span> <span class="token class-name">Person</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// true</span>
+ 
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>per <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// true</span>
+</code></pre></div><br> <h2 id="工作流程分析"><a href="#工作流程分析" aria-hidden="true" class="header-anchor">#</a> 工作流程分析</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">fnInstanseof</span><span class="token punctuation">(</span><span class="token parameter"><span class="token constant">L</span><span class="token punctuation">,</span><span class="token constant">R</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment">// L即per ；  R即Person</span>
+	<span class="token keyword">var</span> <span class="token constant">O</span> <span class="token operator">=</span> <span class="token class-name">R</span><span class="token punctuation">.</span>prototype<span class="token punctuation">,</span> <span class="token comment">// O 为 Person.prototype</span>
+		<span class="token constant">L</span> <span class="token operator">=</span> <span class="token constant">L</span><span class="token punctuation">.</span>__proto__<span class="token punctuation">;</span> <span class="token comment">// L 为 per._proto_</span>
+
+	<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//执行循环</span>
+
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token constant">L</span> <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//不通过</span>
+			<span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token constant">O</span> <span class="token operator">===</span> <span class="token constant">L</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//判断：Person.prototype === per.__proto__</span>
+			<span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment">//如果等于就返回true，证明per是Person类型</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token constant">L</span> <span class="token operator">=</span> <span class="token constant">L</span><span class="token punctuation">.</span>__proto__<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><br> <h2 id="参考"><a href="#参考" aria-hidden="true" class="header-anchor">#</a> 参考</h2> <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof" target="_blank" rel="noopener noreferrer">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://www.jianshu.com/p/6c99d3678283" target="_blank" rel="noopener noreferrer">https://www.jianshu.com/p/6c99d3678283<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div></article> <section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      发布时间 : 2019-05-06
+    </span> <span class="update-date" data-v-4e23451f>
+      最后修改 : 2019-05-06
+    </span></section> <section class="post-links" data-v-4e23451f><a href="/Blog/posts/2019/05/05/html5-characteristic.html" class="post-link" data-v-4e23451f>
+      上一篇文章 : HTML5 新特性!
+    </a> <a href="/Blog/posts/2019/05/07/life-darktime.html" class="post-link" data-v-4e23451f>
+      下一篇文章 : 《暗时间》 读书笔记!
+    </a></section></section> <div id="post-comments" class="main-div"><!----></div></div></main> <aside class="aside" data-v-6cd81e6a><div class="info-card main-div" data-v-782646d4 data-v-6cd81e6a><div class="info-card-header" data-v-782646d4><img src="/Blog/images/tx.jpg" alt="GaoSir" class="info-avatar" data-v-782646d4></div> <div class="info-card-body" data-v-782646d4><section class="info-nickname" data-v-782646d4>
+      GaoSir
+    </section> <section class="info-desc" data-v-782646d4>你若想要得到，就别只是期望。<br/> 人生短暂，经不起等待。</section> <section class="info-contact" data-v-782646d4><section data-v-782646d4><span title="深圳" data-v-782646d4 data-v-782646d4><svg class="icon" style="font-size:1em;" data-v-782646d4 data-v-782646d4><title data-v-782646d4 data-v-782646d4>深圳</title><use xlink:href="#icon-location" data-v-782646d4 data-v-782646d4></use></svg><span class="info-text" data-v-782646d4 data-v-782646d4>
+          深圳
+        </span></span></section> <!----> <section data-v-782646d4><a href="mailto:gaosir_801@163.com" title="gaosir_801@163.com" data-v-782646d4 data-v-782646d4><svg class="icon" style="font-size:1em;" data-v-782646d4 data-v-782646d4><title data-v-782646d4 data-v-782646d4>gaosir_801@163.com</title><use xlink:href="#icon-email" data-v-782646d4 data-v-782646d4></use></svg><span class="info-text" data-v-782646d4 data-v-782646d4>
+          gaosir_801@163.com
+        </span></a></section></section></div> <div class="info-card-footer" data-v-782646d4><section class="info-sns clearfix" data-v-782646d4><a href="https://github.com/gaosirs" target="_blank" class="sns-link" data-v-782646d4><span title="GitHub: Gaosirs" class="sns-icon" data-v-782646d4 data-v-782646d4><svg class="icon" style="font-size:1.5em;" data-v-782646d4 data-v-782646d4><title data-v-782646d4 data-v-782646d4>GitHub: Gaosirs</title><use xlink:href="#icon-github" data-v-782646d4 data-v-782646d4></use></svg></span></a></section></div></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-6cd81e6a><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>文章目录</span> <div class="post-nav-toc"> <ul><li><a href="/Blog/posts/2019/05/06/js-instanseof.html#概述">概述</a> <!----></li><li><a href="/Blog/posts/2019/05/06/js-instanseof.html#语法">语法</a> <!----></li><li><a href="/Blog/posts/2019/05/06/js-instanseof.html#描述">描述</a> <!----></li><li><a href="/Blog/posts/2019/05/06/js-instanseof.html#底层原理">底层原理</a> <!----></li><li><a href="/Blog/posts/2019/05/06/js-instanseof.html#举例">举例</a> <!----></li><li><a href="/Blog/posts/2019/05/06/js-instanseof.html#工作流程分析">工作流程分析</a> <!----></li><li><a href="/Blog/posts/2019/05/06/js-instanseof.html#参考">参考</a> <!----></li></ul> </div></div> <div class="post-nav-comments"><svg class="icon"><title>comment</title><use xlink:href="#icon-comment"></use></svg> <a href="/Blog/posts/2019/05/06/js-instanseof.html#post-comments">
+      评论
+    </a></div></div></aside></div> <footer class="footer" data-v-1114308c><p class="sns-links" data-v-1114308c><a href="https://github.com/gaosirs" target="_blank" class="sns-link" data-v-1114308c><span title="GitHub: Gaosirs" class="sns-icon" data-v-1114308c data-v-1114308c><svg class="icon" style="font-size:25px;" data-v-1114308c data-v-1114308c><title data-v-1114308c data-v-1114308c>GitHub: Gaosirs</title><use xlink:href="#icon-github" data-v-1114308c data-v-1114308c></use></svg></span></a></p> <p data-v-1114308c><span data-v-1114308c>Powered by </span> <a href="https://vuepress.vuejs.org" target="_blank" data-v-1114308c>
+      Vuepress
+    </a></p></footer></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/Blog/assets/js/app.a2efee87.js" defer></script><script src="/Blog/assets/js/3.c4d6cd67.js" defer></script><script src="/Blog/assets/js/16.b3d164fa.js" defer></script>
+  </body>
+</html>
